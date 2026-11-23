@@ -20,7 +20,7 @@ MAX_CHARS = 200
 def main() -> int:
     line = ROAST.strip()
     if not line or len(line) > MAX_CHARS or "\n" in line:
-        raise ValueError("roast must be one line of 1-200 characters")
+        raise ValueError("roast must be a single line of 1-200 characters")
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as handle:
